@@ -20,11 +20,28 @@ function setCardType(type) {
 
 globalThis.setCardType = setCardType
 
-//Security code
 const securityCode = document.querySelector("#security-code")
 const securityCodePattern = {
   mask: "0000",
 }
-
 const securityCodeMask = IMask(securityCode, securityCodePattern)
-cons
+
+const expirationDate = document.querySelector("#expiration-date")
+const expirationDatePattern = {
+  mask: "MM{/}YY",
+
+  blocks: {
+    YY: {
+      mask: IMask.MaskedRange,
+      from: String(new Date().getFullYear()).slice(2),
+      to: String(new Date().getFullYear() + 10).slice(2),
+    },
+
+    MM: {
+      mask: IMask.MaskedRange,
+      from: 1,
+      to: 12,
+    },
+  },
+}
+const expirationDateMask = IMask(expirationDate, expirationDatePattern)

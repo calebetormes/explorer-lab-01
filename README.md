@@ -46,3 +46,5 @@ Esse projeto está sob a licença MIT.
 ---
 
 Feito com ♥ by Rocketseat :wave: [Participe da nossa comunidade!](https://discord.gg/rocketseat)
+
+Veja o projeto em funcionamento pelo link: https://explorer-lab-01-kg7fs1na5-calebetormes.vercel.app/
